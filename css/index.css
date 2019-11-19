@@ -1,0 +1,86 @@
+h2 {
+  text-align: center;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html,body {
+  margin:0;
+  padding:0;
+  background-color:gray;
+}
+
+#sectionWrapper {
+  margin:0 auto;
+}
+
+.left, .right, .main {
+  position: relative;
+  background-color: lightgray;
+  float:left;
+  border:1px solid black;
+  width:32%;
+  margin-left:1%;
+}
+
+.section-1, .section-2, .section-3 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width:40%;
+  height: 20px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+   
+.section-1 {
+  color: black;
+  background-color: pink;
+}
+
+.section-2 {
+  color: white;
+  background-color: red;
+}
+
+.section-3 {
+  color: black;
+  background-color: palegoldenrod;
+}
+
+p {
+  padding: 0px 15px;
+  margin-bottom: 5px;
+}
+
+/* Use a media query to add a breakpoint at 992px: */
+@media screen and (min-width: 992px) {
+  .left, .main, .right {
+    width:32%;
+    margin-left:1%;
+  }
+}
+
+/* Use a media query to add a breakpoint between 991px - 768px */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .left, .main {
+    margin: 3%;
+    margin-left: 4%;
+    width: 42.5%; 
+  }
+  .right {
+    margin: 3%;
+    margin-left:4%;
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .left, .main, .right {
+    margin: 25px;
+    width: 90%; /* The width is 90%, when the viewport is 767px or smaller */
+  }
+}
